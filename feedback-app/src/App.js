@@ -1,7 +1,22 @@
+import React from 'react'
+
+
 function App() {
   return (
-    <h1>Hello from the App component</h1>
+    <div className='container'>
+      <h1>My Feedback App</h1>
+    </div>
   )
 }
 
 export default App
+
+// Alternative way with <JSX></JSX>
+
+
+// function App() {
+//   return React.createElement('div', {className: 'container'}, 
+//     React.createElement('h1', {}, 'My Feedback App')
+//   )
+// }
+
