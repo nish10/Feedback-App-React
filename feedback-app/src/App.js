@@ -4,7 +4,7 @@ import Header from './components/Header'
 function App() {
   return (
     <>
-      <Header text='Hello World'/>
+      <Header text={30} />
       <div className='container'>
         <h1>My Feedback App</h1>
       </div>
