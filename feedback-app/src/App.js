@@ -1,16 +1,16 @@
-import React from 'react'
-import Header from './components/Header'
+import React from 'react';
+import Header from './components/Header';
+import FeedbackItem from './components/FeedbackItem';
 
 function App() {
   return (
     <>
-      <Header bgColor='red' textColor='blue' text='Feedback UI' />
-      <div className='container'>
-        <h1>My Feedback App</h1>
+      <Header bgColor="red" textColor="blue" text="Feedback UI" />
+      <div className="container">
+        <FeedbackItem />
       </div>
     </>
-  )
+  );
 }
 
-export default App
-
+export default App;

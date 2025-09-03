@@ -1,32 +1,31 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function Header({ bgColor, textColor, text }) {
-const headerStyles = {
-  backgroundColor: bgColor,
-  color: textColor
-}
+  const headerStyles = {
+    backgroundColor: bgColor,
+    color: textColor,
+  };
 
   return (
-  <header style={headerStyles}>
-    <div className="container">
-      <h2>{text}</h2>
-    </div>
-  </header>
-  )
+    <header style={headerStyles}>
+      <div className="container">
+        <h2>{text}</h2>
+      </div>
+    </header>
+  );
 }
 
 Header.defaultProps = {
   text: 'Default Header',
   bgColor: 'rgba(0,0,0,0,0.4)',
-  textColor: '#ff6a95'
-}
+  textColor: '#ff6a95',
+};
 
 Header.propTypes = {
   text: PropTypes.string.isRequired,
   bgColor: PropTypes.string,
-  textColor: PropTypes.string
-}
+  textColor: PropTypes.string,
+};
 
-
-export default Header
+export default Header;
