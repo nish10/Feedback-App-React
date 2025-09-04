@@ -1,7 +1,7 @@
-import React from 'react';
-import Card from './shared/Card';
-import PropTypes from 'prop-types';
-import { FaTimes } from 'react-icons/fa';
+import React from "react"
+import Card from "./shared/Card"
+import PropTypes from "prop-types"
+import { FaTimes } from "react-icons/fa"
 
 function FeedbackItem({ item, handleDelete }) {
   return (
@@ -9,7 +9,7 @@ function FeedbackItem({ item, handleDelete }) {
       <div className="num-display">{item.rating}</div>
       <button
         onClick={() => {
-          handleDelete(item.id);
+          handleDelete(item.id)
         }}
         className="close"
       >
@@ -17,11 +17,11 @@ function FeedbackItem({ item, handleDelete }) {
       </button>
       <div className="text-dispay">{item.text}</div>
     </Card>
-  );
+  )
 }
 
 FeedbackItem.propTypes = {
   item: PropTypes.object,
-};
+}
 
-export default FeedbackItem;
+export default FeedbackItem

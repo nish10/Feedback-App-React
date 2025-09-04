@@ -1,26 +1,27 @@
-import React from 'react';
-import Card from './shared/Card';
-import { useState } from 'react';
-import Button from './shared/Button';
+import React from "react"
+import Card from "./shared/Card"
+import { useState } from "react"
+import Button from "./shared/Button"
 
 function FeedbackForm() {
-  const [text, setText] = useState('');
-  const [btnDisabled, setBtnDisabled] = useState(true);
-  const [message, setMessage] = useState('');
+  const [text, setText] = useState("")
+  const [rating, setRating] = useState(10)
+  const [btnDisabled, setBtnDisabled] = useState(true)
+  const [message, setMessage] = useState("")
 
   const handleTextChange = (e) => {
-    if (text === '') {
-      setBtnDisabled(true);
-      setMessage(null);
-    } else if (text !== '' && text.trim().length <= 10) {
-      setMessage('Review must be at least 10 characters long');
-      setBtnDisabled(true);
+    if (text === "") {
+      setBtnDisabled(true)
+      setMessage(null)
+    } else if (text !== "" && text.trim().length <= 10) {
+      setMessage("Review must be at least 10 characters long")
+      setBtnDisabled(true)
     } else {
-      setMessage(null);
-      setBtnDisabled(false);
+      setMessage(null)
+      setBtnDisabled(false)
     }
-    setText(e.target.value);
-  };
+    setText(e.target.value)
+  }
 
   return (
     <Card>
@@ -42,7 +43,7 @@ function FeedbackForm() {
         {message && <div className="message">{message}</div>}
       </form>
     </Card>
-  );
+  )
 }
 
-export default FeedbackForm;
+export default FeedbackForm
