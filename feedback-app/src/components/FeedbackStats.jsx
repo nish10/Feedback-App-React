@@ -1,5 +1,5 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 
 function FeedbackStats({ feedback }) {
   // Calculate Ratings Average
@@ -8,7 +8,7 @@ function FeedbackStats({ feedback }) {
       return acc + cur.rating
     }, 0) / feedback.length
 
-  average = average.toFixed(1).replace(/[.,]0$/, "")
+  average = average.toFixed(1).replace(/[.,]0$/, '')
 
   return (
     <div className="feedback-stats">

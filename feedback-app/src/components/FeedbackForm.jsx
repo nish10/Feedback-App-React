@@ -1,20 +1,21 @@
-import React from "react"
-import Card from "./shared/Card"
-import { useState } from "react"
-import Button from "./shared/Button"
+import React from 'react'
+import Card from './shared/Card'
+import { useState } from 'react'
+import Button from './shared/Button'
+import RatingSelect from '.'
 
 function FeedbackForm() {
-  const [text, setText] = useState("")
+  const [text, setText] = useState('')
   const [rating, setRating] = useState(10)
   const [btnDisabled, setBtnDisabled] = useState(true)
-  const [message, setMessage] = useState("")
+  const [message, setMessage] = useState('')
 
   const handleTextChange = (e) => {
-    if (text === "") {
+    if (text === '') {
       setBtnDisabled(true)
       setMessage(null)
-    } else if (text !== "" && text.trim().length <= 10) {
-      setMessage("Review must be at least 10 characters long")
+    } else if (text !== '' && text.trim().length <= 10) {
+      setMessage('Review must be at least 10 characters long')
       setBtnDisabled(true)
     } else {
       setMessage(null)

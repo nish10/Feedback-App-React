@@ -1,6 +1,6 @@
-import React from "react"
-import FeedbackItem from "./FeedbackItem"
-import PropTypes from "prop-types"
+import React from 'react'
+import FeedbackItem from './FeedbackItem'
+import PropTypes from 'prop-types'
 
 function FeedbackList({ feedback, handleDelete }) {
   if (!feedback || feedback.length === 0) {

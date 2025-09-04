@@ -1,7 +1,7 @@
-import React from "react"
-import Card from "./shared/Card"
-import PropTypes from "prop-types"
-import { FaTimes } from "react-icons/fa"
+import React from 'react'
+import Card from './shared/Card'
+import PropTypes from 'prop-types'
+import { FaTimes } from 'react-icons/fa'
 
 function FeedbackItem({ item, handleDelete }) {
   return (
