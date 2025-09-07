@@ -187,20 +187,30 @@ input:focus {
 
 /* FIX: Remove position: absolute to keep about icon at the bottom of the
  * document */
-.about-link {
+/* .about-link {
   display: flex;
   justify-content: flex-end;
+} */
+
+.about-link {
+  position: fixed;
+  bottom: max(16px, env(safe-area-inset-bottom));
+  right: max(16px, env(safe-area-inset-right));
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 /* FIX: Remove position: absolute to keep about icon at the bottom of the
  * document */
 .about-link a {
-  color: #fff;
+  color: #ff6a95;
   cursor: pointer;
 }
 
 .about-link a:hover {
-  color: #ff6a95;
+  color: #fff;
 }
 
 .about h1 {
