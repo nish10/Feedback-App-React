@@ -7,8 +7,10 @@ import FeedbackStats from './components/FeedbackStats'
 import FeedbackForm from './components/FeedbackForm'
 import { v4 as uuidv4 } from 'uuid'
 import AboutPage from './pages/AboutPage'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom'
 import AboutIconLink from './components/AboutIconLink'
+import Card from './components/shared/Card'
+import Post from './components/Post'
 
 
 function App() {
@@ -39,7 +41,16 @@ function App() {
             </>
           } />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/post/:id/:name" element={<Post />} />
         </Routes>
+        {/* <Card>
+          <NavLink to='/' activeClasses='active'>
+            Home
+          </NavLink>
+          <NavLink to='/about' activeClasses='active'>
+            About
+          </NavLink>
+        </Card> */}
       </div>
     </Router>
   )
