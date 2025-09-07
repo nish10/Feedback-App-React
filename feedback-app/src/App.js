@@ -11,6 +11,8 @@ import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-do
 import AboutIconLink from './components/AboutIconLink'
 import Card from './components/shared/Card'
 import Post from './components/Post'
+import { FeedbackProvider }  from './context/FeedbackContext'
+
 
 
 function App() {
@@ -28,31 +30,25 @@ function App() {
   }
 
   return (
-    <Router>
-      <Header bgColor="#1A1A2E" color="#ff6a95" text="Feedback UI" />
-      <div className="container">
-        <Routes>
-          <Route exact path="/" element={
-            <>
-              <FeedbackForm handleAdd={addFeedback} />
-              <FeedbackStats feedback={feedback} />
-              <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
-              <AboutIconLink />
-            </>
-          } />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/post/*" element={<Post />} />
-        </Routes>
-        {/* <Card>
-          <NavLink to='/' activeClasses='active'>
-            Home
-          </NavLink>
-          <NavLink to='/about' activeClasses='active'>
-            About
-          </NavLink>
-        </Card> */}
-      </div>
-    </Router>
+    <FeedbackProvider>
+      <Router>
+        <Header bgColor="#1A1A2E" color="#ff6a95" text="Feedback UI" />
+        <div className="container">
+          <Routes>
+            <Route exact path="/" element={
+              <>
+                <FeedbackForm handleAdd={addFeedback} />
+                <FeedbackStats feedback={feedback} />
+                <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
+                <AboutIconLink />
+              </>
+            } />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/post/*" element={<Post />} />
+          </Routes>
+        </div>
+      </Router>
+    </FeedbackProvider>
   )
 }
 
