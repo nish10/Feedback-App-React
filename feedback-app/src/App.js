@@ -9,7 +9,6 @@ import { v4 as uuidv4 } from 'uuid'
 import AboutPage from './pages/AboutPage'
 import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom'
 import AboutIconLink from './components/AboutIconLink'
-import Card from './components/shared/Card'
 import Post from './components/Post'
 import { FeedbackProvider }  from './context/FeedbackContext'
 
@@ -39,7 +38,7 @@ function App() {
               <>
                 <FeedbackForm handleAdd={addFeedback} />
                 <FeedbackStats feedback={feedback} />
-                <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
+                <FeedbackList handleDelete={deleteFeedback} />
                 <AboutIconLink />
               </>
             } />
