@@ -4,29 +4,30 @@ import FeedbackList from './components/FeedbackList'
 import FeedbackStats from './components/FeedbackStats'
 import FeedbackForm from './components/FeedbackForm'
 import AboutPage from './pages/AboutPage'
-import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import AboutIconLink from './components/AboutIconLink'
 import Post from './components/Post'
-import { FeedbackProvider }  from './context/FeedbackContext'
-
-
+import { FeedbackProvider } from './context/FeedbackContext'
 
 function App() {
-
   return (
     <FeedbackProvider>
       <Router>
         <Header bgColor="#1A1A2E" color="#ff6a95" text="Feedback UI" />
         <div className="container">
           <Routes>
-            <Route exact path="/" element={
-              <>
-                <FeedbackForm />
-                <FeedbackStats />
-                <FeedbackList />
-                <AboutIconLink />
-              </>
-            } />
+            <Route
+              exact
+              path="/"
+              element={
+                <>
+                  <FeedbackForm />
+                  <FeedbackStats />
+                  <FeedbackList />
+                  <AboutIconLink />
+                </>
+              }
+            />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/post/*" element={<Post />} />
           </Routes>
